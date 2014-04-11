@@ -6,14 +6,23 @@
 	 *	Date:
 	 * 
 	 */
-	 
-	 include_once '../assets/page.php';
+
 	 
 	 class RegistrationActivity {
 	 
+	 	// data members
+	 	var $page;
+	 	var $model;
+	 
+	 
 	 	// constructor
 	 	function __construct() {
-	 	
+	 		
+	 		$this->model = new Model();
+	 		
+	 		$this->page = new Page("Register");
+	 		
+	 		
 	 	}
 	 
 	 
@@ -40,6 +49,13 @@
 	 	
 	 	// show
 	 	function show() {
+	 	
+	 		$this->page->beginDoc();
+	 		
+	 		// enter code here
+	 		
+	 		$this->page->endDoc();
+	 		
 	 	
 	 	}
 	 

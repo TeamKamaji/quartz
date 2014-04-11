@@ -37,6 +37,8 @@
 	 		
 	 		print($this->getHead());
 	 		
+	 		print($this->getOpenBody());
+	 		
 	 		
 	 	}
 	 	

@@ -7,23 +7,30 @@
 	 * 
 	 */
 	 
+	 
+	 // model
+	 include 'model/model.php';
+	 
+	 // page
+	 include 'assets/page.php';
+	 
 	 // called by admin.php
-	 include_once 'adminActivity.php';
+	 include 'activities/adminActivity.php';
 	 
 	 // called by login.php
-	 include_once 'loginActivity.php';
+	 include 'activities/loginActivity.php';
 	 
 	 // called my mymanage.php
-	 include_once 'mymanageActivity.php';
+	 include 'activities/mymanageActivity.php';
 	 
 	 // called by mysite.php
-	 include_once 'mysiteActivity.php';
+	 include 'activities/mysiteActivity.php';
 	 
 	 // called by register.php
-	 include_once 'registerActivity.php';
+	 include 'activities/registerActivity.php';
 	 
 	 // called by reset.php
-	 include_once 'resetActivity.php';
+	 include 'activities/resetActivity.php';
 	 
 
 
