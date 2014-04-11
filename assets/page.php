@@ -3,7 +3,7 @@
 	/*	page.php
 	 *
 	 *	Author: @alexandreaco
-	 *	Date: 2/10/2014
+	 *	Date: 4/10/2014
 	 *	
 	 *	Notes: This document returns HTML code that will be duplicated across many
 	 *		.php files within the project. 
@@ -39,12 +39,16 @@
 	 		
 	 		print($this->getOpenBody());
 	 		
+	 		print($this->getBeginContent());
+	 		
 	 		
 	 	}
 	 	
 	 	
 	 	// end doc PUBLIC
 	 	public function endDoc() {
+	 	
+	 		print($this->getEndContent());
 	 	
 	 		print($this->getCloseBody());
 	 		
@@ -65,6 +69,17 @@
 	 		
 	 	}
 	 	
+	 	
+	 	// get close HTML
+	 	private function getCloseHTML() {
+	 	
+	 		$html = "</HTML>";
+
+	 		return $html;
+	 		
+	 		
+	 	}
+	 	
 	 	// get head	
 	 	private function getHead() {		 	// requires a page title
 	 	
@@ -73,6 +88,7 @@
 	 							
 								<!--Stylesheet-->
 								<link rel='stylesheet' href='assets/css/style.css'>
+								<link rel='stylesheet' href='assets/css/layout.css'>
 				
 								<title>$this->title</title>
 			
@@ -104,19 +120,43 @@
 	 		
 	 		
 	 	}
-	 	
-	 	
-	 	// get close HTML
-	 	private function getCloseHTML() {
-	 	
-	 		$html = "</HTML>";
 
+	 
+		// get begin content
+		private function getBeginContent() {
+		
+			if ($this->title == "My Site") {	// My Site
+			
+				$html = "<div id='container'>
+				<div id='header'></div>
+				<div class='content mysite'>";
+				
+			} else {
+				$html = "<div id='container'>
+				<div id='header'></div>
+				<div class='content'>";
+			}
+	 		
 	 		return $html;
 	 		
 	 		
-	 	}
-	 
+		}
 		
+		
+		// get end content
+		private function getEndContent() {
+		
+			$html = "</div><!-- /content-->
+			<div id='footer'></div>
+			</div><!-- /container -->";	
+
+			return $html;
+			
+	 		
+		 }
+
+
+
 	 }
 
 
