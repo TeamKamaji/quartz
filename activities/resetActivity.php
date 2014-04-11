@@ -7,13 +7,22 @@
 	 * 
 	 */
 	 
-	 include_once '../assets/page.php';
 	 
 	 class ResetActivity {
 	 
+	 	// data members
+	 	var $page;
+	 	var $model;
+	 
+	 
 	 	// constructor
 	 	function __construct() {
-	 	
+	 		
+	 		$this->model = new Model();
+	 		
+	 		$this->page = new Page("Reset Password");
+	 		
+	 		
 	 	}
 	 
 	 
@@ -40,6 +49,13 @@
 	 	
 	 	// show
 	 	function show() {
+	 	
+	 		$this->page->beginDoc();
+	 		
+	 		// enter code here
+	 		
+	 		$this->page->endDoc();
+	 		
 	 	
 	 	}
 	 
