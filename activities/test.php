@@ -8,7 +8,7 @@
 	 */
 	 
 	 
-	 include_once 'assets/page.php';
+	 include_once '../assets/page.php';
 	 
 	 $page = new Page("test page");
 	 
