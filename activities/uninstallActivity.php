@@ -42,7 +42,7 @@
 				print("<html>
 					<head>
 						<title>Uninstall Quartz</title>
-						<link rel='stylesheet' type='text/css' href='customCSS.css'>
+						<link rel='stylesheet' type='text/css' href='assets/css/layout.css'>
 						<center>
 							<div style='position: relative; 
 								background: url(images/Header.jpg);
