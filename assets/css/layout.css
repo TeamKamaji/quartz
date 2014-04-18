@@ -1,0 +1,116 @@
+
+
+/*	layout.css
+ *
+ *	Author: @alexandreaco
+ *	Date: 4/10/2014
+ * 
+ */
+ 
+#container {
+	width: 945px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 50px;
+}
+
+#header {
+	background: url('../images/Header.jpg');
+	width: 945px;
+	height: 124px;
+}
+
+.content {
+	background: url('../images/Body.jpg');
+	width: 945px;
+	height: 945px;
+	
+	/* 	
+	added CSS
+	*/
+	
+	margin: -20px 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	padding: 10px 50px;
+}
+
+/* registration css */
+#reg {
+	background: url('images/Register.jpg');
+	width: 650px;
+	height: 350px;
+	padding: 70px 0 0 50px;
+	display: block;
+	position:relative; 
+	top:59px; 
+	margin-top:50px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family:Tahoma; 
+	font-size: 11px; 
+
+}
+
+#reg input {
+	text-align:left;
+	width: 200px;
+}
+
+#reg p {
+	margin-left: 150px;
+}
+
+#reg .buttons {
+	margin-bottom: -10px;
+	text-align:right;
+	margin-right: 50px;
+	margin-top:70px;
+}
+/* end of registration */
+
+.mysite {
+	background: url('../images/webBody.jpg');
+}
+
+#footer {
+	background: url('../images/Footer.jpg');
+	width: 945px;
+	height: 100px;
+}
+
+.title {
+	margin-top:0;
+	padding: 5px 10px;
+}
+
+
+/*
+NEW
+*/
+
+label.reg {
+	position:absolute;
+	float: left;
+	text-align: left;
+	padding: 4px;
+	padding-right: 200px;
+	margin-right: 15px;
+	width: 25px;
+}
+
+form label { 
+	display: block;  /* block float the labels to left column, set a width */
+	float: left; 
+	width: 150px; 
+	padding: 0;
+	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
+	font-family:Tahoma; 
+	font-size: 11px; 
+	text-align:left;
+}
+
+/*
+END OF NEW
+*/
