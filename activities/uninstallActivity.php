@@ -11,7 +11,7 @@
 		var $context;
 		var $model;
 		var $rootPass;
-		var $dbName;
+		var $dbName = "quartz";
 		var $emptyFlag;
 
 		function __construct(){
@@ -91,8 +91,16 @@
 				</html>");
 			} else if ($this->context = "submitting") {
 				if ($_POST['uninstall'] =='yes') {
+				
+				$model->deleteDatabase($this->dbName, "localhost://quartz");
+				
 				print("<html>
 					<head>
+					
+					
+					
+					
+					
 						<title>Uninstall Quartz</title>
 						<link rel='stylesheet' type='text/css' href='customCSS.css'>
 						<center>
