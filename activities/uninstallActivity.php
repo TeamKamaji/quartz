@@ -43,28 +43,26 @@
 					<head>
 						<title>Uninstall Quartz</title>
 						<link rel='stylesheet' type='text/css' href='assets/css/layout.css'>
-						<center>
-							<div style='position: relative; 
-								background: url(images/Header.jpg);
-								width: 945px; height: 120px;'>
-							</div>
-						</center>
+						<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 					</head>
-					<body bgcolor='#EEEEEE'>
+					
+					
+					<div id='container'>
+					<body>
 						<div id='header'></div>
-
-						<div id='content'>
-							<br><center><font color='FF0000'>$this->emptyFlag</font></center>
-							<h1><center>Thanks for using Quartz!</center></h1>
-							<p style:'margin-left: auto; margin-right: auto;'>
-								 <center>Thank you for choosing the Quartz system to manage your professor and course information online. 
+					
+						<div class ='content'>
+							<br><font color='FF0000'>$this->emptyFlag</font>
+							<h1>Thanks for using Quartz!</h1>
+							
+								 Thank you for choosing the Quartz system to manage your professor and course information online. 
 								  We're sad to see you go.  This page will walk you through uninstalling Quartz.<br><br>
-								</center>
+								
 
 							<u>Have you backed up your data?</u> If you plan on reinstalling Quartz, you can create a backup of your professors' data 
 							in the Admin Panel and install from that backup later.  Please back up your data before uninstalling Quartz.  Once you uninstall,
 							 you will not be able to access your data again.<br><br> <br><br>
-							<u> <center>Uninstalling will remove all professor data. </center> </u>
+							<u> Uninstalling will remove all professor data.</u>
 							
 							<br><br>
 
@@ -76,61 +74,38 @@
 								<input type='radio' name='uninstall' value='no'>	No<br>
 								<p><input type='submit' name='submit'/></p>
 							</form>
-							</p>
 						</div>
 
-						<div id='footer'>
-							<center>
-								<div style='position: relative;
-							background: url(images/Footer.jpg); 
-							width: 945px; height: 100px;'>
-								</div>
-							</center>
-						</div>
+						<div id='footer'> </div>
 					</body>
+					</div>
 				</html>");
 			} else if ($this->context = "submitting") {
 				if ($_POST['uninstall'] =='yes') {
 				
-				$model->deleteDatabase($this->dbName, "localhost://quartz");
-				
 				print("<html>
 					<head>
-					
-					
-					
-					
-					
 						<title>Uninstall Quartz</title>
-						<link rel='stylesheet' type='text/css' href='customCSS.css'>
-						<center>
-							<div style='position: relative; 
-								background: url(images/Header.jpg);
-								width: 945px; height: 120px;'>
-							</div>
-						</center>
+						<link rel='stylesheet' type='text/css' href='assets/css/layout.css'>
+						<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
 					</head>
-					<body bgcolor='#EEEEEE'>
+					
+					<div id='container'>
+					<body>
 						<div id='header'></div>
-
-						<div id='content'>
+						<div class='content'>
 							<br>
-							<center>The Quartz database has successfully been deleted!<br><br> You may now exit your browser.
-							</center>
+							<center>The Quartz database has successfully been deleted!<br><br> You may now exit your browser. </center>
 						</div>
 
-						<div id='footer'>
-							<center>
-								<div style='position: relative;
-							background: url(images/Footer.jpg); 
-							width: 945px; height: 100px;'>
-								</div>
-							</center>
-						</div>
+						<div id='footer'> </div>
 					</body>
+					</div>
 				</html>");
+				
 				} else {
-				print("This would take you back to the admin panel, which we previously demoed.");
+				header("Location: admin.php");
+				die();
 				}		
 			}
 		}
@@ -138,15 +113,18 @@
 		function process(){
 			if($this->context=="submitting"){
 			if ($_POST['uninstall'] =='yes') {
-				$this->model->deleteDatabase($this->dbname);
+				//$model->deleteDatabase($this->dbname, "localhost://quartz");
 				
+				print("suCCess");
+			
 			}
 			}
 		}
 
 		function run() {
-			$this->getInput();
 			$this->show();
+			$this->process();
+			
 		}
 	}
 ?>

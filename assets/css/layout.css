@@ -22,18 +22,22 @@
 
 .content {
 	background: url('../images/Body.jpg');
-	width: 945px;
 	height: 945px;
 	
 	/* 	
 	added CSS
+	EDIT: removed height: 945px;
 	*/
 	
-	margin: -20px 0;
+
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: auto;
 	padding: 10px 50px;
+	
+	/*
+	end of added
+	*/
 }
 
 /* registration css */
@@ -68,7 +72,7 @@
 	margin-right: 50px;
 	margin-top:70px;
 }
-/* end of registration */
+ /* end of registration */
 
 .mysite {
 	background: url('../images/webBody.jpg');
@@ -87,7 +91,7 @@
 
 
 /*
-NEW
+ADDED CSS
 */
 
 label.reg {
@@ -101,16 +105,15 @@ label.reg {
 }
 
 form label { 
-	display: block;  /* block float the labels to left column, set a width */
+	display: block;   block float the labels to left column, set a width 
 	float: left; 
 	width: 150px; 
 	padding: 0;
-	margin: 5px 0 0; /* set top margin same as form input - textarea etc. elements */
+	margin: 5px 0 0;  set top margin same as form input - textarea etc. elements 
 	font-family:Tahoma; 
 	font-size: 11px; 
 	text-align:left;
 }
-
 /*
-END OF NEW
+END OF ADDED
 */
